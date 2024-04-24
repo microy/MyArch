@@ -1,0 +1,12 @@
+ethtool
+fping
+inetutils
+ipcalc
+iperf3
+iproute2
+mtr
+net-tools
+nmap
+rsync
+tcpdump
+whois

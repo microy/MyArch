@@ -1,0 +1,6 @@
+cinnamon-styles-artwork
+draw.io
+lightdm-settings
+mintstick
+mint-themes
+mint-y-icons
