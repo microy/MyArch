@@ -20,9 +20,22 @@ sed -i 's/#Color/Color/' /etc/pacman.conf
 sed -i 's/#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 ```
 
+## Mirroirs
+```
+pacman -S reflector
+
+reflector --age 6 --fastest 15 --protocol https --sort score --country FR,DE,AT,BE,IT,LU,MC,NL,ES,CH,GB,HR,CZ,DK,HU,IE,PL,PT,RO,SI,SE,BG,EE,FI,LV,LT,NO,SK --info
+```
+
+
 ## Mettre à jour le système
 ```
 pacman -Syu paquet
+```
+
+## Mettre à jour les clés
+```
+pacman -Sy --needed archlinux-keyring && pacman -Su
 ```
 
 ## Installer un paquet
@@ -77,11 +90,52 @@ pacman -Qs paquet
 
 ## List all explicitly installed packages
 ```
+utilisation :  pacman {-Q --query} [options ] [paquet(s)]
+options :
+  -b, --dbpath <chemin>    définit l’emplacement de la base de données
+  -c, --changelog          affiche les changements du paquet
+  -d, --deps               liste tous les paquets installés en tant que dépendances [filtre]
+  -e, --explicit           liste tous les paquets installés explicitement [filtre]
+  -g, --groups             affiche tous les éléments d’un groupe de paquets
+  -i, --info               affiche les informations d’un paquet (-ii pour les fichiers de config protégés)
+  -k, --check              vérifie que les fichiers du paquet sont tous bien présents
+                           (-kk pour vérifier les propriétés des fichiers)
+  -l, --list               liste les fichiers appartenant au paquet interrogé
+  -m, --foreign            liste les paquets non trouvés dans la ou les bases de données de synchronisation [filtre]
+  -n, --native             liste les paquets installés trouvés seulement dans les base de données synchronisées [filtre]
+  -o, --owns <fichier>     recherche le paquet contenant le fichier <fichier>
+  -p, --file <paquet>      interroge le fichier <paquet> au lieu de la base de données
+  -q, --quiet              affiche moins d’informations
+  -r, --root <chemin>      définit la racine où installer
+  -s, --search <regex>     recherche la chaîne correspondante dans les paquets installés localement
+  -t, --unrequired         liste les paquets qui ne sont requis (optionnellement)
+                           par aucun autre paquet (-tt pour ignorer les dépendances optionnelles) [filtre]
+  -u, --upgrades           liste tous les paquets pouvant être mis à jour [filtre]
+  -v, --verbose            affiche plus de détails
+      --arch <arch>        spécifie une architecture
+      --cachedir <dossier> définit le dossier de cache
+      --color <quand>      affiche le texte en couleur
+      --config <chemin>    impose un fichier de configuration alternatif
+      --confirm            toujours demander une confirmation
+      --debug              affiche les messages de débogage
+      --disable-download-timeout
+                       utilise des délais d’attente relâchés pour télécharger
+      --gpgdir <chemin>    spécifie le chemin du dossier personnel pour GnuPG
+      --hookdir <dir>      spécifie un autre dossier pour les crochets (« hooks »)
+      --logfile <chemin>   spécifie le fichier journal
+      --noconfirm          ne demande aucune confirmation
+      --sysroot        opère sur un système invité monté (root-seulement)
+```
+
+```
 pacman -Qe
 
 Keeping a list of all explicitly installed packages can be useful to backup a system or quicken the installation of a new one:
 
 pacman -Qqe > pkglist.txt
+
+# AUR packages
+pacman -Qem
 ```
 
 ## Removing unused packages (orphans)
