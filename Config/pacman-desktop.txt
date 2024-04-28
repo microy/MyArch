@@ -25,6 +25,7 @@ libreoffice-still-fr
 lightdm
 lightdm-gtk-greeter
 lightdm-slick-greeter
+minder
 mythes-fr
 nemo-fileroller
 nextcloud-client
