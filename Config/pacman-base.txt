@@ -19,3 +19,6 @@ nano
 networkmanager
 pacman-contrib
 sudo
+ntfs-3g
+exfatprogs
+dosfstools
