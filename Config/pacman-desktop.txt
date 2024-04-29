@@ -37,6 +37,7 @@ pipewire-pulse
 pyside6
 pyside6-tools 
 python-numpy
+python-pip
 system-config-printer
 thunderbird
 thunderbird-i18n-fr
