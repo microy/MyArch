@@ -21,9 +21,12 @@ sed -i 's/#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 ```
 
 ## Mirroirs
+https://ostechnix.com/retrieve-latest-mirror-list-using-reflector-arch-linux/
 ```
 pacman -S reflector
 
+reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+reflector --latest 20 --protocol https --sort age --save /etc/pacman.d/mirrorlist
 reflector --age 6 --fastest 15 --protocol https --sort score --country FR,DE,AT,BE,IT,LU,MC,NL,ES,CH,GB,HR,CZ,DK,HU,IE,PL,PT,RO,SI,SE,BG,EE,FI,LV,LT,NO,SK --info
 ```
 
