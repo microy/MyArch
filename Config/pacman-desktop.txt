@@ -17,6 +17,7 @@ gnome-system-monitor
 gnome-terminal
 gparted
 jre-openjdk-headless
+hplip
 hunspell-fr
 hyphen-fr
 inkscape
