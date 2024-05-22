@@ -3,7 +3,9 @@ base
 base-devel
 bash-completion
 dkms
+dosfstools
 efibootmgr
+exfatprogs
 fwupd
 git
 intel-ucode
@@ -17,8 +19,7 @@ man-pages-fr
 minicom
 nano
 networkmanager
+ntfs-3g
 pacman-contrib
 sudo
-ntfs-3g
-exfatprogs
-dosfstools
+usbutils
