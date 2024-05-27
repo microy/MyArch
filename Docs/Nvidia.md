@@ -7,12 +7,7 @@ https://wiki.archlinux.org/title/GPGPU
 
 ## Installation des packages :
 ```
-pacman -S nvidia-lts nvidia-xconfig nvidia-settings nvidia-utils vulkan-icd-loader opencl-nvidia ocl-icd
-```
-
-## Configuration :
-```
-nvidia-xconfig
+pacman -S nvidia-lts nvidia-settings nvidia-utils vulkan-icd-loader opencl-nvidia ocl-icd
 ```
 
 ## Hook pour les mises à jours :
