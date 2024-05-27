@@ -25,20 +25,18 @@ Créer le fichier : `/boot/loader/entries/arch.conf`
 ```
 title Arch Linux
 linux /vmlinuz-linux-lts
-initrd /intel-ucode.img
 initrd /initramfs-linux-lts.img
 options root=/dev/sda3 rw quiet
-options root=UUID=fc473f56-759d-4d66-8d53-9378645e7682 rw quiet
+options root=UUID=fc473f56-759d-4d66-8d53-9378645e7682 rw quiet splash
 ```
 
 Créer le fichier : `/boot/loader/entries/arch-fallback.conf`
 ```
 title Arch Linux
 linux /vmlinuz-linux-lts
-initrd /intel-ucode.img
 initrd /initramfs-linux-lts-fallback.img
 options root=/dev/sda3 rw
-options root=UUID=fc473f56-759d-4d66-8d53-9378645e7682 rw
+options root=UUID=fc473f56-759d-4d66-8d53-9378645e7682 rw quiet splash
 ```
 
 ## Grub
