@@ -16,7 +16,7 @@ gnome-keyring
 gnome-system-monitor
 gnome-terminal
 gparted
-jre-openjdk-headless
+jre-openjdk
 hplip
 hunspell-fr
 hyphen-fr
@@ -35,6 +35,7 @@ p7zip
 pdftk
 pipewire
 pipewire-pulse
+pipewire-jack
 pyside6
 pyside6-tools 
 python-numpy
@@ -50,6 +51,8 @@ ttf-roboto
 ttf-ubuntu-font-family
 unison
 virtualbox
+virtualbox-guest-iso
+virtualbox-host-dkms
 vlc
 wireshark-qt
 xdg-user-dirs
