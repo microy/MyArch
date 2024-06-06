@@ -3,6 +3,7 @@ cups-browsed
 cups-filters
 cups-pdf
 cups-pk-helper
+foomatic-db-engine
 foomatic-db-ppds
 foomatic-db-gutenprint-ppds
 foomatic-db-nonfree-ppds
