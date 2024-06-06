@@ -24,10 +24,10 @@ timedatectl set-ntp true
 fdisk -l
 fdisk /dev/disque
 
-mkfs.fat -F 32 /dev/efi_system_partition
-mkswap /dev/swap_partition
-mkfs.ext4 /dev/root_partition
-mkfs.ext4 /dev/home_partition
+mkfs.fat -F 32 -n UEFI /dev/efi_system_partition
+mkswap -L SWAP /dev/swap_partition
+mkfs.ext4 -L SYSTEM /dev/root_partition
+mkfs.ext4 -L HOME /dev/home_partition
 ```
 
 ### Montage des partitions
@@ -70,6 +70,12 @@ hwclock --systohc
 ```
 
 ### Configuration de la langue
+```
+sed -i 's/^#fr_FR.UTF-8/fr_FR.UTF-8/' /etc/locale.gen
+locale-gen
+echo 'LANG=en_US.UTF-8' > /etc/locale.conf
+echo 'KEYMAP=fr' > /etc/vconsole.conf
+```
 
 ```
 locatectl set-keymap fr
@@ -78,12 +84,6 @@ localectl set-locale fr_FR.UTF-8
 locale-gen
 ```
 
-```
-sed -i 's/^#fr_FR.UTF-8/fr_FR.UTF-8/' /etc/locale.gen
-locale-gen
-echo 'LANG=en_US.UTF-8' > /etc/locale.conf
-echo 'KEYMAP=fr' > /etc/vconsole.conf
-```
 
 ### Configuration du réseau
 
