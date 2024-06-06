@@ -168,7 +168,17 @@ To install packages from a previously saved list of packages, while not reinstal
 ```
 pacman -S --needed - < pkglist.txt
 pacman -S --needed $(grep -v ^\# pkglist.txt)
+```
 
+## Nettoyage du cache
+To retain only one past version use:
+```
+paccache -rvk1
+```
 
+## Nettoyage automatique du cache
+
+```
+systemctl enable --now paccache.timer
 ```
 
