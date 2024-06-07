@@ -10,6 +10,15 @@ https://wiki.archlinux.org/title/GPGPU
 pacman -S nvidia-lts nvidia-settings nvidia-utils vulkan-icd-loader opencl-nvidia ocl-icd
 ```
 
+
+## Activation du mode settings
+
+Fichier `/boot/loader/entries/arch.conf` :
+```
+options root=.... rw quiet splash nvidia_drm.modeset=1
+```
+
+
 ## Hook pour les mises à jours :
 Créer le fichier : `/etc/pacman.d/hooks/nvidia.hook`
 ```
