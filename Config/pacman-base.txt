@@ -22,4 +22,5 @@ networkmanager
 ntfs-3g
 pacman-contrib
 sudo
+udisks2
 usbutils
