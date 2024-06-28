@@ -55,6 +55,9 @@ virtualbox-guest-iso
 virtualbox-host-dkms
 vlc
 wireshark-qt
+xdg-desktop-portal-gtk
+xdg-desktop-portal-xapp
+xdg-utils
 xdg-user-dirs
 xdg-user-dirs-gtk
 xed
