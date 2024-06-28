@@ -9,6 +9,7 @@ exfatprogs
 fwupd
 git
 intel-ucode
+iw
 linux-firmware
 linux-lts
 linux-lts-headers
@@ -21,6 +22,9 @@ nano
 networkmanager
 ntfs-3g
 pacman-contrib
+reflector
 sudo
 udisks2
 usbutils
+wget
+wpa_supplicant
