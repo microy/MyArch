@@ -23,18 +23,29 @@ timedatectl set-ntp true
 ```
 fdisk -l
 fdisk /dev/disque
-
-mkfs.fat -F 32 -n UEFI /dev/efi_system_partition
-mkswap -L SWAP /dev/swap_partition
-mkfs.ext4 -L SYSTEM /dev/root_partition
-mkfs.ext4 -L HOME /dev/home_partition
+```
+```
+sfdisk $DISK << EOF
+label: gpt
+size=2G, type=uefi, name="UEFI"
+size=40G, type=swap, name="SWAP"
+size=200G, type=linux, name="LINUX"
+type=linux, name="HOME"
+EOF
+```
+### Formatage des partitions
+```
+mkfs.fat -v -F 32 -n UEFI /dev/efi_system_partition
+mkswap --verbose -L SWAP /dev/swap_partition
+mkfs.ext4 -v -L SYSTEM /dev/root_partition
+mkfs.ext4 -v -L HOME /dev/home_partition
 ```
 
 ### Montage des partitions
 
 ```
 mount /dev/root_partition /mnt
-mount /dev/home_partition /mnt/home
+mount --mkdir /dev/home_partition /mnt/home
 mount --mkdir /dev/efi_system_partition /mnt/boot
 swapon /dev/swap_partition
 ```
@@ -50,8 +61,14 @@ pacstrap -K /mnt base linux-lts linux-firmware networkmanager sudo nano bash-com
 ### Génération du fichier fstab
 
 ```
+# Avec nom des partitions
+genfstab /mnt >> /mnt/etc/fstab
+```
+```
 # Avec UUID
 genfstab -U /mnt >> /mnt/etc/fstab
+```
+```
 # Avec label
 genfstab -L /mnt >> /mnt/etc/fstab
 ```
@@ -88,7 +105,7 @@ locale-gen
 ### Configuration du réseau
 
 ```
-echo 'hostname' /etc/hostname
+echo 'hostname' > /etc/hostname
 systemctl enable NetworkManager.service
 ```
 
