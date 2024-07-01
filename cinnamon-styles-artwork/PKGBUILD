@@ -1,0 +1,19 @@
+# Maintainer: Michaël Roy <microygh@gmail.com>
+
+pkgname=cinnamon-styles-artwork
+pkgver=1.8.3
+pkgrel=1
+pkgdesc='Some theme and icon styles for Cinnamon. Based on mint-artwork'
+arch=('any')
+url="http://packages.linuxmint.com/pool/main/m/mint-artwork/"
+license=('GPL3')
+depends=('bibata-cursor-theme'
+    'cinnamon'
+    'mint-y-icons'
+    'mint-themes')
+conflicts=(mint-artwork)
+source=("${pkgname}_${pkgver}.tar.xz::${url}/mint-artwork_${pkgver}.tar.xz")
+sha256sums=('35a2273fad34410f6c35168980cf523726b0673d47f20c22b99e257fc2899c89')
+package() {
+    install -Dm644 "${srcdir}/mint-artwork/usr/share/cinnamon/styles.d/22_mint-artwork.styles" -t "${pkgdir}/usr/share/cinnamon/styles.d/"
+}
