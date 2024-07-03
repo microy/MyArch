@@ -32,4 +32,6 @@ package() {
   cd "$pkgname-$pkgver"
 
   make DESTDIR="$pkgdir/" install
+	install -vDm644 "makeflags.conf" "/etc/makepkg.conf.d/makeflags.conf"
+
 }
