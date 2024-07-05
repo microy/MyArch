@@ -1,19 +1,24 @@
 # Maintainer: Michaël Roy <microygh@gmail.com>
 
 pkgname=cinnamon-styles-artwork
-pkgver=1.8.3
+pkgver=1.8.4
 pkgrel=1
 pkgdesc='Some theme and icon styles for Cinnamon. Based on mint-artwork'
 arch=('any')
 url="http://packages.linuxmint.com/pool/main/m/mint-artwork/"
 license=('GPL3')
 depends=('bibata-cursor-theme'
-    'cinnamon'
-    'mint-y-icons'
-    'mint-themes')
+         'cinnamon'
+         'mint-y-icons'
+         'mint-themes')
 conflicts=(mint-artwork)
-source=("${pkgname}_${pkgver}.tar.xz::${url}/mint-artwork_${pkgver}.tar.xz")
-sha256sums=('35a2273fad34410f6c35168980cf523726b0673d47f20c22b99e257fc2899c89')
+source=("${pkgname}_${pkgver}.tar.xz::${url}/mint-artwork_${pkgver}.tar.xz"
+        "90-qt5ct.sh")
+sha256sums=('0e9468193541d6f6a27f850d88211a54efe9c9063c1dcfd01b5be662456bdc8c'
+            '02401e37c3a45802737980a143270a659a796818ec38d3b1c32b35ba70a4d7ee')
 package() {
-    install -Dm644 "${srcdir}/mint-artwork/usr/share/cinnamon/styles.d/22_mint-artwork.styles" -t "${pkgdir}/usr/share/cinnamon/styles.d/"
+	# Install mint artwork styles
+    install -Dm644 "${srcdir}/mint-artwork/usr/share/cinnamon/styles.d/22_mint-artwork.styles" "${pkgdir}/usr/share/cinnamon/styles.d/22_mint-artwork.styles"
+	# Install qt5ct configuration
+	install -Dm755 "${srcdir}/90-qt5ct.sh" "${pkgdir}/etc/X11/xinit/xinitrc.d/90-qt5ct.sh"
 }
