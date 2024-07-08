@@ -12,7 +12,7 @@ arch=('any')
 url='https://fonts.google.com/specimen/Open+Sans'
 license=('Open Font License')
 
-_raw="https://github.com/googlefonts/opensans/tree/main/fonts/ttf"
+_raw="https://github.com/googlefonts/opensans/raw/main/fonts/ttf"
 
 source=("${_raw}/OpenSans-Bold.ttf"
         "${_raw}/OpenSans-BoldItalic.ttf"
@@ -28,19 +28,19 @@ source=("${_raw}/OpenSans-Bold.ttf"
         "${_raw}/OpenSans-CondensedLight.ttf"
         "${_raw}/OpenSans-CondensedLightItalic.ttf")
 
-sha256sums=('421477fdd4d3a79b4f716f5497547a1c9f34eb20cf4d6148ff8e30249d464ed1'
-            '602b895af4704ccd4d263570b83cbee6367cf5c777cc06b755e51635c78cf3d4'
-            '84e6725c13ec29c978c26733c263eb1a9b22dfb550db9c3f6edbc6c7f68f61ef'
-            '05a52cd26e26c74dce13fcc5784012fe857774d725635fd1b79170dcb995f5e3'
-            '70c5e26debfc0649d579c566e92f3071c2dc1535babe83e66e7fbb7c97f411a2'
-            '9011f6a767d8879407d469598534372a705a3b229f05ce75164f1cf8d328a6ff'
-            '85ee78edeb9fb85b25096ab1ecb7f551c695746378c04ae704588e645e8d5b5d'
-            'a7a0530c42b2904d3333f6f1c3e09be4abcc1b4a407050f1fccf07cbcb526a11'
-            '43c962480472dc80132eff3924d50565c3ffaeda8a25a9a18de5e3758f199b56'
-            'cff33726b1d12797a5bcb7598f0914918539c9e6f147186fae780c69824494c7'
-            '40f7335c576fa247f048f40bbf4ecbcc0b35894b8072503a1cd2119ba8fc4323'
-            'fb7cc943b1e86dceef57f4cd3171cc4b8c4dbc96fc99548d0c4caf2545f99f65'
-            'd3370235d599bde069d549aa665fbb26733e51df6a9642f75162c3d0f93a5373')
+sha256sums=('27da758f4dcac9a65abe914c13b463b42982b9909bc65713424099f4810bd1e6'
+            'd672a770037104b6af45e1336b3d3c1729c8aea940f81e010f5a8a7319c29a21'
+            '22c3e66c8a0ae60bf10ee636bb8a54d61ff77c956f5c4ebe3058b793e56ee727'
+            '63f46cd436c572334203c297062acc012c117bf1413f0e40f6b5215637c05236'
+            '93bc1bb6abf4e6b7c75d7131714061d5b57cc478abcabe4cb3519bb38fb917aa'
+            '3472097ec4d9e57228cbfad3c9911e53923664d3df86568d0b05d674399e034e'
+            '548dc557bcef26267d16f1afaf0770814a329c9f04a0168d396ca9d1ceafb16f'
+            'c53aceea2dcf5b4098099c0c4d0a061d17e178a049317b42a422b1a9f7f8eb59'
+            '4a413711684a9dd564ef0f1c10cb62b5d9f7eb6df2cff962f5341a6ecd5f64ae'
+            'c646a9aefc0e964f66487260639e375685328a6280856faea3e012c43fe9c56d'
+            'a4b0906939e47017907cc7f7de0fae81707e1f127185b7d75ba967c09d7fe050'
+            'bd09013ebb713ef8bdf17fd7bac92e51a6ff2f2e6844f561ae0cda2a457a9ed0'
+            '22b3404c171d1a743f276144c7a294cba142822801bef987c7e9a3dd0d3083ed')
 
 package() {
   install -dm 755 "${pkgdir}/usr/share/fonts/TTF"
