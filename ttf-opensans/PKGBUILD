@@ -1,0 +1,48 @@
+# Maintainer: Michaël Roy <microygh@gmail.com>
+# Contributor: Jiachen YANG <farseerfc@archlinux.org>
+# Contributor: Gavin Lloyd <gavinhungry@gmail.com>
+# Contributor: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Hexchain Tong <i@hexchain.org>
+
+pkgname=ttf-opensans
+pkgver=3.003
+pkgrel=1
+pkgdesc='Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp. '
+arch=('any')
+url='https://fonts.google.com/specimen/Open+Sans'
+license=('Open Font License')
+
+_raw="https://github.com/googlefonts/opensans/tree/main/fonts/ttf"
+
+source=("${_raw}/OpenSans-Bold.ttf"
+        "${_raw}/OpenSans-BoldItalic.ttf"
+        "${_raw}/OpenSans-ExtraBold.ttf"
+        "${_raw}/OpenSans-ExtraBoldItalic.ttf"
+        "${_raw}/OpenSans-Italic.ttf"
+        "${_raw}/OpenSans-Light.ttf"
+        "${_raw}/OpenSans-LightItalic.ttf"
+        "${_raw}/OpenSans-Regular.ttf"
+        "${_raw}/OpenSans-SemiBold.ttf"
+        "${_raw}/OpenSans-SemiBoldItalic.ttf"
+        "${_raw}/OpenSans-CondensedBold.ttf"
+        "${_raw}/OpenSans-CondensedLight.ttf"
+        "${_raw}/OpenSans-CondensedLightItalic.ttf")
+
+sha256sums=('421477fdd4d3a79b4f716f5497547a1c9f34eb20cf4d6148ff8e30249d464ed1'
+            '602b895af4704ccd4d263570b83cbee6367cf5c777cc06b755e51635c78cf3d4'
+            '84e6725c13ec29c978c26733c263eb1a9b22dfb550db9c3f6edbc6c7f68f61ef'
+            '05a52cd26e26c74dce13fcc5784012fe857774d725635fd1b79170dcb995f5e3'
+            '70c5e26debfc0649d579c566e92f3071c2dc1535babe83e66e7fbb7c97f411a2'
+            '9011f6a767d8879407d469598534372a705a3b229f05ce75164f1cf8d328a6ff'
+            '85ee78edeb9fb85b25096ab1ecb7f551c695746378c04ae704588e645e8d5b5d'
+            'a7a0530c42b2904d3333f6f1c3e09be4abcc1b4a407050f1fccf07cbcb526a11'
+            '43c962480472dc80132eff3924d50565c3ffaeda8a25a9a18de5e3758f199b56'
+            'cff33726b1d12797a5bcb7598f0914918539c9e6f147186fae780c69824494c7'
+            '40f7335c576fa247f048f40bbf4ecbcc0b35894b8072503a1cd2119ba8fc4323'
+            'fb7cc943b1e86dceef57f4cd3171cc4b8c4dbc96fc99548d0c4caf2545f99f65'
+            'd3370235d599bde069d549aa665fbb26733e51df6a9642f75162c3d0f93a5373')
+
+package() {
+  install -dm 755 "${pkgdir}/usr/share/fonts/TTF"
+  install -m 644 *.ttf "${pkgdir}/usr/share/fonts/TTF/"
+}
