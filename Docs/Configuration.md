@@ -157,3 +157,9 @@ systemctl enable -now cups
 ```
 systemctl enable --now sshd
 ```
+
+## Services
+```
+systemctl enable --now reflector.timer
+systemctl enable --now fstrim.timer
+```
