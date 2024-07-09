@@ -23,8 +23,12 @@ networkmanager
 ntfs-3g
 pacman-contrib
 reflector
+screen
 sudo
+tmux
+tree
 udisks2
 usbutils
 wget
+wireless-regdb
 wpa_supplicant
