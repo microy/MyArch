@@ -72,6 +72,7 @@ alias tree='tree -C --dirsfirst'
 alias ssh-nokey='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
 alias du='du -h --max-depth=1'
 alias df='df -h'
+alias install-backup='install --backup --suffix=.$(date "+%Y%m%d")'
 
 # Colored IP command
 export COLORFGBG=';0'
