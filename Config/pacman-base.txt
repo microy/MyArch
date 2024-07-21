@@ -28,6 +28,7 @@ sudo
 tmux
 tree
 udisks2
+usb_modeswitch
 usbutils
 wget
 wireless-regdb
