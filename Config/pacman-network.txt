@@ -4,6 +4,7 @@ inetutils
 ipcalc
 iperf3
 iproute2
+ldns
 mtr
 net-tools
 nmap
