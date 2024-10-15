@@ -60,6 +60,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 bind "set bell-style none"
 
 # Aliases
+alias sudo='sudo '
 alias ls='ls -h --color=auto --group-directories-first'
 alias ll='ls -lv'
 alias la='ll -A'
