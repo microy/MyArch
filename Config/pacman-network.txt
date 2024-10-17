@@ -4,10 +4,14 @@ inetutils
 ipcalc
 iperf3
 iproute2
+iptraf
 ldns
 mtr
 net-tools
+netstat
 nmap
+openbsd-netcat
 rsync
 tcpdump
+traceroute
 whois
