@@ -87,6 +87,15 @@ sed -i 's/#Color/Color/' /etc/pacman.conf
 sed -i 's/#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 ```
 
+## Security
+
+Faillock :
+https://wiki.archlinux.org/title/Security#Lock_out_user_after_three_failed_login_attempts
+
+```
+deny = 0
+```
+
 
 ## Desktop
 
@@ -162,4 +171,6 @@ systemctl enable --now sshd
 ```
 systemctl enable --now reflector.timer
 systemctl enable --now fstrim.timer
+systemctl enable --now systemd-resolved.service
+systemctl enable --now systemd-timesyncd.service
 ```
