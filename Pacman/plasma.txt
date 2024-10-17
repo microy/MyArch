@@ -1,13 +1,21 @@
 plasma
 konsole
-kwrite
+kate
 dolphin
+dolphin-plugins
 ark
 egl-wayland
 p7zip
+gwenview
+isoimagewriter
+kdegraphics-thumbnailers
+kio-admin
+kio-extras
+okular
+
 
 # Remove
-# discover krdp kate plymouth plymouth-kcm breeze-plymouth
+# discover krdp plymouth plymouth-kcm breeze-plymouth
 
 # Couleur
 #2E3436

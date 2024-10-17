@@ -1,5 +1,6 @@
 chromium
 code
+drawio-desktop
 firefox
 firefox-i18n-fr
 gimp
@@ -9,7 +10,7 @@ hyphen-fr
 inkscape
 libreoffice-still
 libreoffice-still-fr
-minder
+#minder
 mythes-fr
 nextcloud-client
 python-numpy
