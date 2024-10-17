@@ -53,7 +53,7 @@ swapon /dev/swap_partition
 ### Installation des packages essentiels
 
 ```
-pacstrap -K /mnt base linux-lts linux-firmware networkmanager sudo nano bash-completion
+pacstrap -K /mnt base git linux linux-lts linux-firmware networkmanager sudo nano bash-completion
 ```
 
 ## Configuration du système
