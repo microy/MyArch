@@ -1,0 +1,13 @@
+plasma
+konsole
+kwrite
+dolphin
+ark
+egl-wayland
+p7zip
+
+# Remove
+# discover krdp kate plymouth plymouth-kcm breeze-plymouth
+
+# Couleur
+#2E3436

@@ -33,6 +33,7 @@ tree
 udisks2
 usb_modeswitch
 usbutils
+vim
 wget
 wireless-regdb
 wpa_supplicant
