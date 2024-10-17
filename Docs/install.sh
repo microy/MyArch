@@ -3,9 +3,9 @@
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 hwclock --systohc
 
-echo 'fr_FR.UTF-8' >> /etc/locale.gen
+echo 'fr_FR.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
-echo 'LANG=en_US.UTF-8' > /etc/locale.conf
+echo 'LANG=fr_FR.UTF-8' > /etc/locale.conf
 echo 'KEYMAP=fr' > /etc/vconsole.conf
 
 echo 'hostname' > /etc/hostname
