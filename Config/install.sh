@@ -7,4 +7,4 @@ set -e
 DATE=$(date "+%Y%m%d")
 
 # Install file
-install --backup --suffix=.$DATE $1 $2	
+install --mode=644 --backup --suffix=.$DATE $1 $2
