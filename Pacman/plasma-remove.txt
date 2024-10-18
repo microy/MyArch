@@ -1,0 +1,5 @@
+discover
+krdp
+plymouth
+plymouth-kcm
+breeze-plymouth
