@@ -31,7 +31,6 @@ man-pages-fr
 minicom
 mtr
 nano
-netstat
 networkmanager
 ntfs-3g
 openbsd-netcat
