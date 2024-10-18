@@ -11,10 +11,3 @@ kdegraphics-thumbnailers
 kio-admin
 kio-extras
 okular
-
-
-# Remove
-# discover krdp plymouth plymouth-kcm breeze-plymouth
-
-# Couleur
-#2E3436
