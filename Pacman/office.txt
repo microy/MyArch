@@ -8,6 +8,7 @@ hunspell-en_US
 hunspell-fr
 hyphen-fr
 inkscape
+jre-openjdk
 libreoffice-still
 libreoffice-still-fr
 #minder
