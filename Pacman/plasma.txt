@@ -1,4 +1,8 @@
 plasma
+qt6-multimedia-ffmpeg
+pipewire-jack
+noto-fonts
+noto-fonts-emoji
 konsole
 kate
 dolphin
@@ -9,5 +13,7 @@ gwenview
 isoimagewriter
 kdegraphics-thumbnailers
 kio-admin
-kio-extras
 okular
+spectacle
+partitionmanager
+kalk
