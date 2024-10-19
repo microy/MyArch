@@ -2,6 +2,7 @@ amd-ucode
 base
 base-devel
 bash-completion
+bind
 dhclient
 dkms
 dosfstools
