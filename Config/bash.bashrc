@@ -78,3 +78,7 @@ alias install-backup='install --backup --suffix=.$(date "+%Y%m%d")'
 # Colored IP command
 export COLORFGBG=';0'
 alias ip='ip -color'
+
+# Minicom
+alias minicom-switch='minicom --device /dev/ttyS0'
+alias minicom-router='minicom --device /dev/ttyACM0'
