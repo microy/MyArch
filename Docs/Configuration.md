@@ -17,6 +17,8 @@ nano /etc/systemd/timesyncd.conf.d/ub.conf
 
 [Time]
 NTP=ntp.u-bourgogne.fr
+FallbackNTP=0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org
+
 
 systemctl restart systemd-timesyncd.service
 systemctl status systemd-timesyncd.service 
