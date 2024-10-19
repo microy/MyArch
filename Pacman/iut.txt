@@ -1,0 +1,11 @@
+netstat-nat
+ndisc6
+pyside6
+pyside6-tools 
+python-numpy
+python-pip
+scapy
+
+# AUR
+#packettracer
+#udpcast
