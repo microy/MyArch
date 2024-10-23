@@ -1,6 +1,7 @@
 easy-rsa
 ipcalc
 iperf3 
+ipv6calc
 netstat-nat
 ndisc6
 nmap
@@ -10,6 +11,7 @@ pyside6
 pyside6-tools 
 python-numpy
 python-pip
+python-pipx
 rpi-imager
 scapy
 

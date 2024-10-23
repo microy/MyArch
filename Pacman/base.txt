@@ -16,6 +16,7 @@ htop
 inetutils
 intel-ucode
 iperf3
+iptraf-ng
 iw
 iwd
 ldns
@@ -33,6 +34,7 @@ man-pages-fr
 minicom
 mtr
 nano
+net-tools
 networkmanager
 ntfs-3g
 openbsd-netcat
@@ -54,5 +56,6 @@ usb_modeswitch
 usbutils
 vim
 wget
+whois
 wireless-regdb
 wpa_supplicant
