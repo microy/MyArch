@@ -173,6 +173,12 @@ systemctl enable --now sshd
 ```
 systemctl enable --now reflector.timer
 systemctl enable --now fstrim.timer
+systemctl enable --now paccache.timer
 systemctl enable --now systemd-resolved.service
 systemctl enable --now systemd-timesyncd.service
+systemctl enable --now bluetooth.service
+systemctl enable --now cups.service
+systemctl enable --now sshd.service
+systemctl enable --now sddm.service
+systemctl enable --now systemd-boot-update.service
 ```
