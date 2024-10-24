@@ -1,3 +1,7 @@
+#
+# /usr/share/sddm/themes/breeze/theme.conf.user
+#
+
 [General]
 #background=5120x2880.png
 #type=image

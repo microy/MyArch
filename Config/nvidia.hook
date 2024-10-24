@@ -1,4 +1,7 @@
+#
 # /etc/pacman.d/hooks/nvidia.hook
+#
+
 [Trigger]
 Operation=Install
 Operation=Upgrade

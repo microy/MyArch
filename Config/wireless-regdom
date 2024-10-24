@@ -1,4 +1,8 @@
 #
+# /etc/conf.d/wireless-regdom
+#
+
+#
 # Wireless regulatory domain configuration
 #
 

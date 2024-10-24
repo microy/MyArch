@@ -1,3 +1,7 @@
+#
+# /etc/bash.bashrc
+#
+
 # System-wide .bashrc file for interactive bash(1) shells.
 
 # If not running interactively, don't do anything
