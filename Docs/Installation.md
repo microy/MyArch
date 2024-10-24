@@ -92,11 +92,13 @@ sed -i 's/^#fr_FR.UTF-8/fr_FR.UTF-8/' /etc/locale.gen
 locale-gen
 echo 'LANG=fr_FR.UTF-8' > /etc/locale.conf
 echo 'KEYMAP=fr' > /etc/vconsole.conf
+echo 'XKBLAYOUT=fr' >> /etc/vconsole.conf
+echo 'XKBMODEL=pc105' >> /etc/vconsole.conf
 ```
 
 ```
 locatectl set-keymap fr
-localectl set-x11-keymap fr
+localectl set-x11-keymap fr pc105
 localectl set-locale fr_FR.UTF-8 
 locale-gen
 ```

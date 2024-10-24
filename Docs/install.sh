@@ -7,8 +7,12 @@ echo 'fr_FR.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 echo 'LANG=fr_FR.UTF-8' > /etc/locale.conf
 echo 'KEYMAP=fr' > /etc/vconsole.conf
+echo 'XKBLAYOUT=fr' >> /etc/vconsole.conf
+echo 'XKBMODEL=pc105' >> /etc/vconsole.conf
 
-echo 'hostname' > /etc/hostname
+
+read -r _hostname
+echo "$_hostname" > /etc/hostname
 systemctl enable NetworkManager.service
 
 mkinitcpio -P
