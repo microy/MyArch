@@ -3,3 +3,5 @@ krdp
 plymouth
 plymouth-kcm
 breeze-plymouth
+wacomtablet
+plasma-welcome
