@@ -3,7 +3,5 @@
 #
 
 [General]
-#background=5120x2880.png
-#type=image
 type=color
 color=#2e3436

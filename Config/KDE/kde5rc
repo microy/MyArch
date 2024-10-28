@@ -1,0 +1,3 @@
+[KDE Control Module Restrictions][$i]
+mouse.desktop=false
+splashscreen.desktop=false
