@@ -7,3 +7,4 @@ foomatic-db-engine
 foomatic-db-ppds
 foomatic-db-gutenprint-ppds
 foomatic-db-nonfree-ppds
+system-config-printer
