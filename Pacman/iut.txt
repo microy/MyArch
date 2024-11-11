@@ -8,10 +8,12 @@ nmap
 openvpn
 putty
 pyside6
-pyside6-tools 
+pyside6-tools
+python-pyftpdlib
 python-numpy
 python-pip
 python-pipx
+python-pyopenssl
 rpi-imager
 scapy
 
