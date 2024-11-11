@@ -1,3 +1,4 @@
+molotov
 packettracer
 subsurface-appimage
 ttf-ms-win11-auto
