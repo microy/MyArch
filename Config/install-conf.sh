@@ -4,4 +4,4 @@
 set -e
 
 # Install file
-install -D --mode=644 --backup --suffix=.$(date "+%Y%m%d") $1 $2
+install -vD --mode=644 --backup --suffix=.$(date "+%Y%m%d") $1 $2
