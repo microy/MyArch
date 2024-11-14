@@ -18,5 +18,11 @@ rpi-imager
 scapy
 
 # AUR
-#packettracer
-#udpcast
+# packettracer
+# udpcast
+
+# RT-Auxerre
+# rt-chat
+# rt-qchat
+# rt-web-server
+# rt-ftp-server
