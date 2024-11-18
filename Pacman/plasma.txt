@@ -11,7 +11,7 @@ ark
 egl-wayland
 gwenview
 isoimagewriter
-kdegraphics-thumbnailers
+#kdegraphics-thumbnailers
 kio-admin
 okular
 spectacle
