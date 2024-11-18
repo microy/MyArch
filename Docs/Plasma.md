@@ -7,7 +7,7 @@ https://community.kde.org/Distributions/Packaging_Recommendations
 
 ## Background Couleur
 ```
-#2E3436
+#242526
 ```
 
 ## HDPI
