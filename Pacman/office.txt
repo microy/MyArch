@@ -19,10 +19,11 @@ mythes-fr
 nextcloud-client
 thunderbird
 thunderbird-i18n-fr
-ttf-opensans
+#ttf-opensans
 unison
 virtualbox
 virtualbox-guest-iso
 virtualbox-host-modules-arch
 virtualbox-host-modules-lts
 wireshark-qt
+xournalpp
