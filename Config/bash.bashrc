@@ -38,7 +38,7 @@ fi;
 # Fancy prompt
 reset_style="\[\e[m\]";
 path_style="\[\e[1;36m\]";
-PS1="\n╭╴( ${user_style}\u${reset_style} @ ${host_style}\h${reset_style} ) - [ ${path_style}\w${reset_style} ]\n╰╴\\$ ";
+PS1="\n┌─ ( ${user_style}\u${reset_style} @ ${host_style}\h${reset_style} ) - [ ${path_style}\w${reset_style} ]\n└─ \\$ ";
 unset user_style host_style reset_style path_style
 
 # Arch
