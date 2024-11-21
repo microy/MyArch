@@ -23,33 +23,37 @@ shopt -s histappend
 # Arch : [[ $DISPLAY ]] && shopt -s checkwinsize
 shopt -s checkwinsize
 
-# Highlight the user name when logged in as root.
-if [ "${USER}" = "root" ];
-then user_style="\[\e[1;31m\]";
-else user_style="\[\e[1;32m\]";
-fi;
-
-# Highlight the hostname when connected via SSH.
-if [ -n "${SSH_TTY}" ];
-then host_style="\[\e[1;31m\]";
-else host_style="\[\e[1;32m\]";
-fi;
+# Do not bell on tab-completion
+bind "set bell-style none"
 
 # Fancy prompt
-reset_style="\[\e[m\]";
-path_style="\[\e[1;36m\]";
-PS1="\n┌─ ( ${user_style}\u${reset_style} ¤ ${host_style}\h${reset_style} ) - [ ${path_style}\w${reset_style} ]\n└─ \\$ ";
-unset user_style host_style reset_style path_style
+prompt() {
+	# Highlight the user name when logged in as root.
+	if [ "${USER}" = "root" ];
+	then local user_style="\[\e[1;31m\]";
+	else local user_style="\[\e[1;32m\]";
+	fi;
+
+	# Highlight the hostname when connected via SSH.
+	if [ -n "${SSH_TTY}" ];
+	then local host_style="\[\e[1;31m\]";
+	else local host_style="\[\e[1;32m\]";
+	fi;
+
+	local reset_style="\[\e[m\]";
+	local path_style="\[\e[1;36m\]";
+	PS1="\n┌─ ( ${user_style}\u${reset_style} ) ─ { ${host_style}\h${reset_style} } : [ ${path_style}\w${reset_style} ]\n└─ \\$ ";
+}
+prompt
 
 # Arch
 case ${TERM} in
-  Eterm*|alacritty*|aterm*|foot*|gnome*|konsole*|kterm*|putty*|rxvt*|tmux*|xterm*)
-    PROMPT_COMMAND+=('printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"')
-
-    ;;
-  screen*)
-    PROMPT_COMMAND+=('printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"')
-    ;;
+	Eterm*|alacritty*|aterm*|foot*|gnome*|konsole*|kterm*|putty*|rxvt*|tmux*|xterm*)
+		PROMPT_COMMAND+=('printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"')
+		;;
+	screen*)
+		PROMPT_COMMAND+=('printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"')
+		;;
 esac
 
 # Enable bash completion
@@ -59,9 +63,6 @@ fi
 
 # Colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# Do not bell on tab-completion
-bind "set bell-style none"
 
 # Aliases
 alias sudo='sudo '
