@@ -33,15 +33,14 @@ prompt() {
 	then local user_style="\[\e[1;31m\]";
 	else local user_style="\[\e[1;32m\]";
 	fi;
-
 	# Highlight the hostname when connected via SSH.
 	if [ -n "${SSH_TTY}" ];
 	then local host_style="\[\e[1;31m\]";
-	else local host_style="\[\e[1;32m\]";
+	else local host_style="\[\e[1;33m\]";
 	fi;
-
 	local reset_style="\[\e[m\]";
 	local path_style="\[\e[1;36m\]";
+	# Prompt definition
 	PS1="\n┌─ ( ${user_style}\u${reset_style} ) ─ { ${host_style}\h${reset_style} } : [ ${path_style}\w${reset_style} ]\n└─ \\$ ";
 }
 prompt
