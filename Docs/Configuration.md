@@ -181,4 +181,5 @@ systemctl enable --now cups.service
 systemctl enable --now sshd.service
 systemctl enable --now sddm.service
 systemctl enable --now systemd-boot-update.service
+systemctl enable --now tuned tuned-ppd
 ```

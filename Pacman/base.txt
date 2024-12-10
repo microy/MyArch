@@ -49,6 +49,7 @@ tcpdump
 tmux
 traceroute
 tree
+tuned-ppd
 udisks2
 unrar
 unzip
