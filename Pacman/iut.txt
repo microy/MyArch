@@ -2,6 +2,7 @@ easy-rsa
 ipcalc
 iperf3 
 ipv6calc
+ipython
 netstat-nat
 ndisc6
 nmap
@@ -9,11 +10,13 @@ openvpn
 putty
 pyside6
 pyside6-tools
-python-pyftpdlib
+python-matplotlib
 python-numpy
 python-pip
-python-pipx
+python-pyftpdlib
+python-pygame
 python-pyopenssl
+python-scipy
 rpi-imager
 scapy
 
