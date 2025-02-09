@@ -26,6 +26,7 @@ linux-headers
 linux-lts
 linux-lts-headers
 lm_sensors
+lrzsz
 lsb-release
 lshw
 man-db
