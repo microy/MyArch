@@ -10,3 +10,5 @@ pu parity           N
 pu stopbits         1
 pu rtscts           No
 pu xonxoff          No
+pu pprog3           lrzsz-sx -vv -X
+pu pprog6           lrzsz-rx -vv -X
