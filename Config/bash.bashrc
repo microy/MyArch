@@ -78,6 +78,9 @@ alias ssh-nokey='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
 alias du='du -h --max-depth=1'
 alias df='df -h'
 alias install-backup='install -v -D --mode=644 --backup --suffix=.$(date "+%Y%m%d")'
+alias traceroute='traceroute -I'
+alias traceroute6='traceroute6 -I'
+
 
 # Colored IP command
 export COLORFGBG=';0'
