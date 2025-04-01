@@ -1,0 +1,31 @@
+# Maintainer: Olivier Le Moal <mail at olivierlemoal dot fr>
+# Contributor: Pranay Kanwar <warl0ck@metaeye.org>
+# Updated by: Michaël Roy <microygh@gmail.com>
+
+pkgname=yersinia
+pkgver=0.8.2
+pkgrel=1
+pkgdesc="A network tool designed to take advantage of some weakness in different network protocols"
+url="https://github.com/tomac/yersinia"
+depends=('libpcap' 'libnet' 'gtk2')
+license=("GPL")
+arch=('i686' 'x86_64')
+makedepends=('git')
+
+source=(yersinia::git+https://github.com/tomac/yersinia#branch=master
+	https://patch-diff.githubusercontent.com/raw/tomac/yersinia/pull/95.patch)
+
+md5sums=('SKIP' 'SKIP')
+
+build() {
+	cd "${srcdir}/yersinia/"
+    	patch -Np1 -i ../95.patch
+	./autogen.sh --prefix=/usr
+	./configure --prefix=/usr
+	make
+}
+
+package() {
+        cd "${srcdir}/yersinia/"
+	make DESTDIR=${pkgdir} install	
+}
