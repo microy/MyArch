@@ -12,5 +12,7 @@ pu rtscts           No
 pu xonxoff          No
 pu pprog3           lrzsz-sx -vv -X
 pu pprog6           lrzsz-rx -vv -X
+pu sfcolor          BLACK
+pu sbcolor          WHITE
 
 
