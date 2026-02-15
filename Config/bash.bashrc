@@ -89,3 +89,9 @@ alias ip='ip -color'
 # Minicom
 alias minicom-switch='minicom --device /dev/ttyS0'
 alias minicom-router='minicom --device /dev/ttyACM0'
+
+# Docker
+alias docker-update='docker compose pull ; docker compose up -d --force-recreate ; docker system prune --all'
+
+# Rsync
+alias rsync-archive='rsync --archive --delete --verbose --stats'
