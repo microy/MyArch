@@ -14,5 +14,5 @@ pu pprog3           lrzsz-sx -vv -X
 pu pprog6           lrzsz-rx -vv -X
 pu sfcolor          BLACK
 pu sbcolor          WHITE
-pu logfname        /tmp/minicom.log
+pu logfname         /tmp/minicom.log
 
