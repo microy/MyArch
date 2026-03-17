@@ -7,3 +7,4 @@ kismet
 metasploit
 nmap
 thc-ipv6
+wavemon
