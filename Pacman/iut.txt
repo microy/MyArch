@@ -16,7 +16,9 @@ python-pip
 python-pyftpdlib
 python-pygame
 python-pyopenssl
+python-rich
 python-scipy
+python-textual
 rpi-imager
 scapy
 
