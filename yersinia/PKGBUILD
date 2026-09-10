@@ -1,31 +1,47 @@
-# Maintainer: Olivier Le Moal <mail at olivierlemoal dot fr>
-# Contributor: Pranay Kanwar <warl0ck@metaeye.org>
-# Updated by: Michaël Roy <microygh@gmail.com>
+# This file is part of BlackArch Linux ( https://www.blackarch.org/ ).
+# See COPYING for license details.
 
 pkgname=yersinia
 pkgver=0.8.2
-pkgrel=1
-pkgdesc="A network tool designed to take advantage of some weakness in different network protocols"
-url="https://github.com/tomac/yersinia"
-depends=('libpcap' 'libnet' 'gtk2')
-license=("GPL")
-arch=('i686' 'x86_64')
-makedepends=('git')
+pkgrel=2
+groups=('blackarch' 'blackarch-networking' 'blackarch-scanner')
+pkgdesc='A network tool designed to take advantage of some weakness in different network protocols.'
+arch=('x86_64' 'aarch64')
+url='https://github.com/tomac/yersinia'
+depends=('libpcap' 'libnet' 'gtk2-compat')
+license=('GPL')
+source=("https://github.com/tomac/$pkgname/archive/v$pkgver.tar.gz"
+        "$pkgname-noptrix.patch")
+sha512sums=('2c7c89f19b6791150c472a6066b6ffaf9ac5b3d1a3d2e6a27f91293bba9a0f72d147266731e5e2670e4bf7e67ccf04b6e353071ca42d3d281b25126c9bfcb1dd'
+            'afea5055e006c4685977d7b347a47e97085fc8d88ee72b978ef0866da99cd987bd604cc4051e9a21132c55ab421959006b9091ba9d75bf1f4b5ba0f161ddd7dc')
 
-source=(yersinia::git+https://github.com/tomac/yersinia#branch=master
-	https://patch-diff.githubusercontent.com/raw/tomac/yersinia/pull/95.patch)
+prepare() {
+  cd "$pkgname-$pkgver"
 
-md5sums=('SKIP' 'SKIP')
+  patch -p2 < "$srcdir/yersinia-noptrix.patch"
+}
 
 build() {
-	cd "${srcdir}/yersinia/"
-    	patch -Np1 -i ../95.patch
-	./autogen.sh --prefix=/usr
-	./configure --prefix=/usr
-	make
+  cd "$pkgname-$pkgver"
+
+  if [[ "$CARCH" == "i686" || "$CARCH" == "x86_64" ]];
+  then
+    ./configure --prefix=/usr --sbindir=/usr/bin \
+      --with-pcap-includes=/usr/include/
+  else
+    ./configure --build=arm --prefix=/usr --sbindir=/usr/bin \
+      --with-pcap-includes=/usr/include/
+  fi
+
+  make
 }
 
 package() {
-        cd "${srcdir}/yersinia/"
-	make DESTDIR=${pkgdir} install	
+  cd "$pkgname-$pkgver"
+
+  make DESTDIR="$pkgdir" install
+
+  install -Dm 644 -t "$pkgdir/usr/share/doc/$pkgname" AUTHORS ChangeLog INSTALL \
+    NEWS THANKS FAQ
 }
+
